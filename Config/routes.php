@@ -1,7 +1,7 @@
 <?php
 if(isset($_GET['action'])) {
     switch ($_GET['action']) {
-        case("accueil"):
+        case("tableau_de_bord"):
             $content = "./HTML/accueil.php";
             $title = "GLPI Inside | Le gestionnaire de parc informatique open source";
             break;
