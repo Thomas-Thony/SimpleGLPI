@@ -1,5 +1,5 @@
 <center>
     <?php
-        echo "PAGE NON TROUVÉE !";
+        echo "<h1>PAGE NON TROUVÉE !</h1>";
     ?>
 </center>

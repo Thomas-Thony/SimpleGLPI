@@ -1,9 +1,10 @@
 <?php
 session_start();
 
-if(isset($_SESSION['Gestionnaire'])){
-    header('Location: index.php?action="se_connecter"');
-}
+/*if(!isset($_SESSION['Gestionnaire'])){
+    echo "<script>window.location.href='index.php?action=se_connecter'</script>";
+    exit();
+}*/
 
 include_once './Config/connexion.php';
 include_once './Config/routes.php';
