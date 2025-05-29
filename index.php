@@ -25,5 +25,8 @@ include_once './Config/routes.php';
     <section>
         <?php include_once $content ?>
     </section>
+
+    <!--Pied de page-->
+    <?php include_once './HTML/footer.php'; ?>
 </body>
 </html>

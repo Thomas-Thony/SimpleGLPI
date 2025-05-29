@@ -1,5 +1,7 @@
 <?php
 
+session_destroy();
+
 include_once './Config/connexion.php';
 
 $connexion = connexion();

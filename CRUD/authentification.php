@@ -6,18 +6,33 @@ $connexion = connexion();
 
 ?>
 
-<div class="content_form">
-    <div class="form-container">
-        <h1>S'identifier</h1>
-        <form action="./Config/login.php" method="POST">
-            <label for="pseudo">Pseudo</label>
-            <input type="text" id="pseudo" name="pseudo" required>
-            
-            <label for="mot_de_passe">Mot de passe</label>
-            <input type="email" id="email" name="email" required>
+<head>
+    <link rel="stylesheet" href="./CSS/authentification.css">
+    <meta charset="UTF-8">
+</head>
 
-            <button type="submit">Envoyer</button>
-        </form>
-        <p>Vous n'avez pas de compte ? <a href="index.php?action=inscription">Inscrivez-vous</a></p>
+<body>
+    <h1>GLPI Inside</h1>
+    
+    <form action="./Config/traitementConnexion.php" method="POST">
+    <h2>S'identifier</h2>
+    <div class="formulaire">
+        <div class="saisie">
+            <input type="text" name="pseudo" placeholder="Pseudo" required />
+            <br>
+            <small class="consignes" id="fullname"> Le pseudo peut contenir des lettres, des    espaces, des chiffres ou des tirets.</small>
+        </div>
+
+        <div class="saisie">
+            <input type="password" name="password" placeholder="Mot de passe" required/>
+            <br>
+            <small class="consignes" id="mot_de_passe">Votre mot de passe peut contendes    chiffres, des lettres, et les caractères -, *, !, et %</small>
+        </div>
+
+        <div>
+            <input type="submit" value="Se connecter" />
+        </div>
     </div>
-</div>
+    </form>
+    <p>Vous n'avez pas de compte ? <a href="index.php?action=inscription">Inscrivez-vous</a></p>
+</body>

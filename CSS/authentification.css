@@ -1,0 +1,47 @@
+form {
+    justify-items: center;
+}
+
+.formulaire {
+    padding: 20px 140px;
+    border: 2px solid black;
+    border-radius: 12px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    width: fit-content;
+}
+
+form input[type="text"],
+[type="email"],
+[type="password"] {
+    border-radius: 12px;
+    height: 20px;
+}
+
+.saisie {
+    width: fit-content;
+    padding-bottom: 20px;
+}
+
+form input[type="submit"] {
+    background-color: #063970;
+    color: white;
+    padding: 10px 20px;
+    transition: 0.25s ease;
+    border: 2px solid #063970;
+    border-radius: 12px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #eeeee4;
+    color: #063970;
+    cursor: pointer;
+    border: 2px solid #eeeee4;
+}
+
+form small.consignes {
+    font-size: 0.8em;
+    color: gray;
+}

@@ -23,7 +23,7 @@ if(isset($_GET['action'])) {
 
         default:
             $content = "./HTML/404.php";
-            $title = "Page non trouvée | Find Me App";
+            $title = "Page non trouvée | GLPI Inside";
             break;
     }
 } else {
