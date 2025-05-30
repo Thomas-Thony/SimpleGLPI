@@ -21,7 +21,7 @@
             <li class="bandeau-item"><a href="index.php?action=inventaire">Inventaire</a></li>
             <li class="bandeau-item"><a href="index.php?action=reseaux">Réseaux</a></li>
             <li class="bandeau-item"><a href="index.php?action=utilisateurs">Utilisateurs</a></li>
-            <li class="bandeau-item"><a href="index.php?action=deconnexion">Se déconnecter</a></li>
+            <li class="bandeau-item"><a href="./logout.php">Se déconnecter</a></li>
         </ul>
     </nav>
 </body>

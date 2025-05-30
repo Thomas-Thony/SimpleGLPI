@@ -1,8 +1,8 @@
 <?php
-
 include_once './Config/connexion.php';
 
 $connexion = connexion();
+
 
 ?>
 
@@ -34,5 +34,5 @@ $connexion = connexion();
         </div>
     </div>
     </form>
-    <p>Vous n'avez pas de compte ? <a href="index.php?action=inscription">Inscrivez-vous</a></p>
+    <p>Vous n'avez pas de compte ? <a href="./register.php">Inscrivez-vous</a></p>
 </body>

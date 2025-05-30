@@ -13,9 +13,7 @@ form {
     width: fit-content;
 }
 
-form input[type="text"],
-[type="email"],
-[type="password"] {
+form input[type="text"], [type="email"], [type="password"] {
     border-radius: 12px;
     height: 20px;
 }

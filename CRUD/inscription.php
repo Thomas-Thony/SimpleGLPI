@@ -12,7 +12,7 @@ $connexion = connexion();
     <link rel="stylesheet" href="./CSS/inscription.css">
 </head>
 <h1>GLPI Inside</h1>
-<form action="./Config/traitementConnexion.php" method="POST">
+<form action="../Config/traitementInscription.php" method="POST">
     <h2>S'inscrire</h2>
 <div class="formulaire">
     <div class="saisie">
@@ -51,4 +51,4 @@ $connexion = connexion();
 </div>
 </form>
 
-<p>On se connait non ? <a href="index.php?action=se_connecter">Authentifiez-vous</a></p>
+<p>On se connait non ? <a href="./login.php">Authentifiez-vous</a></p>

@@ -1,13 +1,14 @@
 <?php
 session_start();
-
-/*if(!isset($_SESSION['Gestionnaire'])){
-    echo "<script>window.location.href='index.php?action=se_connecter'</script>";
-    exit();
-}*/
-
 include_once './Config/connexion.php';
 include_once './Config/routes.php';
+$action = $_GET['action'] ?? '';
+
+if (!isset($_SESSION["Gestionnaire"]) && !in_array($action, ['se_connecter', 'inscription'])) {
+    header("Location: ./login.php");
+    exit();
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">

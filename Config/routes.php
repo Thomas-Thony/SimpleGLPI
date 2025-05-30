@@ -7,7 +7,7 @@ if(isset($_GET['action'])) {
             break;
 
         /**Connexion-Inscription-Déconnexion*/
-        case("se_connecter"):
+        /*case("se_connecter"):
             $content = "./CRUD/authentification.php";
             $title = "GLPI Inside | S'authentifier";
             break;
@@ -15,7 +15,7 @@ if(isset($_GET['action'])) {
         case("inscription"):
                 $content = "./CRUD/inscription.php";
                 $title = "GLPI Inside | S'authentifier";
-                break;
+                break;*/
         case("deconnexion"):
             $content = "./CRUD/deconnexion.php";
             $title = "GLPI Inside | S'authentifier";

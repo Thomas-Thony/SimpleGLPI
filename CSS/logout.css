@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=Funnel+Display:wght@300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    font-family: "Roboto", sans-serif;
+}
+
+h1, h2{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.optionsConnexion{
+    justify-content: center;
+    display: flex;
+    padding: 0 20px;
+}
+
+
+.titreOption{
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.lienOption{
+    width: fit-content;
+}
+
+.lienOption a{
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    color: aqua;
+    text-decoration: none;
+    border-radius: 12px;
+    background-color: #063970;
+    transition: 0.2s ease;
+}
+
+.lienOption a:hover{
+    background-color: #eeeee4;
+    color: #063970;
+}
