@@ -11,6 +11,7 @@ $connexion = connexion();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/inscription.css">
 </head>
+<center>
 <h1>GLPI Inside</h1>
 <form action="../Config/traitementInscription.php" method="POST">
     <h2>S'inscrire</h2>
@@ -51,4 +52,9 @@ $connexion = connexion();
 </div>
 </form>
 
-<p>On se connait non ? <a href="./login.php">Authentifiez-vous</a></p>
+<p>
+    On se connait non ? 
+    <a href="./login.php">Authentifiez-vous
+    </a>
+</p>
+</center>

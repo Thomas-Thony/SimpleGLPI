@@ -1,0 +1,60 @@
+.tableauCategoriesItems{
+    justify-content: center;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 150px) /* Ajuster le nombre de colonnes selon les besoins */
+    /*Ajouter le style pour faire comme un display flex mais avec un maximum de container de matériel par "ligne" (Utilisation d'un grid donc)*/
+}
+
+a.lienInventaire {
+    text-decoration: none;
+    color: black;
+}
+
+a.lienInventaire:hover div.itemOrdinateurs{
+    color: rgb(255, 131, 138);
+    background-color: rgb(245,184,187);
+}
+
+a.lienInventaire:hover div.itemTelephones {
+    color: rgb(171, 255,172);
+    background-color: rgb(123,212,24);
+}
+
+a.lienInventaire:hover div.itemSwitchs {
+    color: rgb(168,217,255);
+    background-color: rgb(117,163,199);
+}
+
+a.lienInventaire:hover div.itemRouteurs {
+    color: rgb(247,204,151);
+    background-color: rgb(204, 161,108);
+}
+
+.itemOrdinateurs{
+    background-color: brown;
+    border: 1px solid brown;
+    box-shadow: 5px red;
+    width: fit-content;
+}
+
+.itemTelephones {
+    background-color: greenyellow;
+    border: 1px solid greenyellow;
+    box-shadow: inset;
+    width: fit-content;
+}
+
+.itemSwitchs {
+    background-color: aqua;
+    border: 1px solid aqua;
+    box-shadow: inset;
+    width: fit-content;
+}
+
+.itemRouteurs{
+    background-color: orange;
+    border: 1px solid orange;
+    box-shadow: inset;
+    width: fit-content;
+}

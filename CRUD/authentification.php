@@ -12,6 +12,7 @@ $connexion = connexion();
 </head>
 
 <body>
+<center>
     <h1>GLPI Inside</h1>
     
     <form action="./Config/traitementConnexion.php" method="POST">
@@ -34,5 +35,9 @@ $connexion = connexion();
         </div>
     </div>
     </form>
-    <p>Vous n'avez pas de compte ? <a href="./register.php">Inscrivez-vous</a></p>
+    <p class="lien">
+        Vous n'avez pas de compte ?
+        <a href="./register.php">Inscrivez-vous</a>
+    </p>
+</center>
 </body>

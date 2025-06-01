@@ -1,0 +1,19 @@
+.infosCompte {
+    max-width: fit-content;
+    border: 2px solid #063970;
+    border-radius: 12px;
+    flex-direction: column;
+    justify-self: center;
+}
+
+.infosCompte .avatarUtilisateur img{
+    padding-top: 10px;
+    width: 100px;
+    height: auto;
+    padding-left: 30%;
+
+}
+
+.infosCompte p {
+    padding: 5px;
+}

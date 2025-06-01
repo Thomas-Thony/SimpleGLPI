@@ -7,6 +7,7 @@
 h1, h2{
     text-align: center;
     margin-top: 20px;
+    color: gray;
 }
 
 .optionsConnexion{
@@ -16,9 +17,9 @@ h1, h2{
 }
 
 
-.titreOption{
-    color: #333;
+h3.titreOption{
     margin-bottom: 20px;
+    color: gray;
 }
 
 .lienOption{
@@ -32,7 +33,7 @@ h1, h2{
     color: aqua;
     text-decoration: none;
     border-radius: 12px;
-    background-color: #063970;
+    background-color: blue;
     transition: 0.2s ease;
 }
 

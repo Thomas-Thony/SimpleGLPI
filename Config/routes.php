@@ -5,7 +5,10 @@ if(isset($_GET['action'])) {
             $content = "./HTML/accueil.php";
             $title = "GLPI Inside | Le gestionnaire de parc informatique open source";
             break;
-
+        case("inventaire"):
+            $content = "./HTML/inventaire.php";
+            $title = "GLPI Inside | L'inventaire de votre parc informatique";
+            break;
         /**Connexion-Inscription-Déconnexion*/
         /*case("se_connecter"):
             $content = "./CRUD/authentification.php";
@@ -15,10 +18,16 @@ if(isset($_GET['action'])) {
         case("inscription"):
                 $content = "./CRUD/inscription.php";
                 $title = "GLPI Inside | S'authentifier";
-                break;*/
+                break;
+        */
         case("deconnexion"):
             $content = "./CRUD/deconnexion.php";
             $title = "GLPI Inside | S'authentifier";
+            break;
+
+        case ("user"):
+            $content = "./CRUD/userSpace/monCompte.php";
+            $title = "GLPI Inside | Mon compte";
             break;
 
         default:

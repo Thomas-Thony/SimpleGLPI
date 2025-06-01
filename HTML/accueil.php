@@ -3,17 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/tableau_de_bord.css">
 </head>
 <body>
-    <?php
-    if(isset($_SESSION["Gestionnaire"]) && !empty($_SESSION["Gestionnaire"]["Pseudo"])) {
-    echo '<p>Bienvenue ' .  $_SESSION["Gestionnaire"]["Pseudo"]. ' !</p>';
-} else {
-        echo "Pour un accueil personalisé, veuillez vous connecter.";
-    }
-?>
-    
     <h1>Tableau de bord</h1>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eius aperiam amet quod modi corporis nobis ad unde velit et ducimus, aut ratione soluta neque adipisci illo numquam dolorem repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eius aperiam amet quod modi corporis nobis ad unde velit et ducimus, aut ratione soluta neque adipisci illo numquam dolorem repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eius aperiam amet quod modi corporis nobis ad unde velit et ducimus, aut ratione soluta neque adipisci illo numquam dolorem repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eius aperiam amet quod modi corporis nobis ad unde velit et ducimus, aut ratione soluta neque adipisci illo numquam dolorem repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eius aperiam amet quod modi corporis nobis ad unde velit et ducimus, aut ratione soluta neque adipisci illo numquam dolorem repellendus.
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, nesciunt vel tempora, nam possimus quasi architecto culpa fugiat nisi cumque molestiae. Non vel ut quam, quaerat recusandae modi consectetur explicabo?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quae pariatur, explicabo tempore qui minima quas non tenetur, est beatae error similique dolores reiciendis velit expedita odit nemo facere perspiciatis!
+    </p>
 </body>
 </html>

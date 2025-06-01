@@ -14,7 +14,14 @@
 <!--Titre du bandeau du bandeau menu-->
         <h1>Simple GLPI</h1>
         <hr>
-        
+
+<!--Logo de l'utilisateur-->
+<center>
+<a class="lienCompteUtilisateur" href="index.php?action=user">
+    <img class="avatarUtilisateur" src="./Sources/user.png" alt="Logo utilisateur">
+    <br><?php echo $_SESSION["Gestionnaire"]["Pseudo"]; ?></a>
+</center>
+
 <!--Menu de navigation-->
         <ul class="bandeau-menu">
             <li class="bandeau-item"><a href="index.php?action=tableau_de_bord">Tableau de bord</a></li>
