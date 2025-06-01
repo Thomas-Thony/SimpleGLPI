@@ -5,9 +5,30 @@ if(isset($_GET['action'])) {
             $content = "./HTML/accueil.php";
             $title = "GLPI Inside | Le gestionnaire de parc informatique open source";
             break;
+        /*Patie inventaire*/
         case("inventaire"):
             $content = "./HTML/inventaire.php";
             $title = "GLPI Inside | L'inventaire de votre parc informatique";
+            break;
+        
+        case("ordintateurs"):
+            $content = "./HTML/inventaires/ordinateurs.php";
+            $title = "GLPI Inside | L'inventaire de vos ordinateurs";
+            break;
+
+        case("telephones"):
+            $content = "./HTML/inventaires/telephones.php";
+            $title = "GLPI Inside | L'inventaire de vos télephones";
+            break;
+
+        case("switchs"):
+            $content = "./HTML/inventaires/switchs.php";
+            $title = "GLPI Inside | L'inventaire de vos switchs";
+            break;
+
+        case("routeurs"):
+            $content = "./HTML/inventaires/routeurs.php";
+            $title = "GLPI Inside | L'inventaire de vos routeurs";
             break;
         /**Connexion-Inscription-Déconnexion*/
         /*case("se_connecter"):
