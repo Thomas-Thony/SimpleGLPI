@@ -17,11 +17,11 @@ table {
     padding: 20px;
 }
 
-thead tr th {
+thead tr th{
     font-weight: 800;
 }
 
-table.tableauInventaireOrdinateurs {
+table.tableauInventaireTelephonesPortables {
     background-color: aquamarine;
     padding: 20px;
 }
@@ -32,11 +32,13 @@ caption {
     font-weight: bold;
 }
 
-thead,tfoot {
+thead,
+tfoot {
     background-color: rgb(228 240 245);
 }
 
-th,td {
+th,
+td {
     border: 1px solid rgb(160 160 160);
     padding: 8px 10px;
 }
@@ -54,7 +56,7 @@ tfoot th {
 }
 
 tfoot td {
-    font-weight: bold; 
+    font-weight: bold;
 }
 
 /*Boutons d'action*/
@@ -80,7 +82,7 @@ tfoot td {
     opacity: 0.85;
 }
 
-button.boutonModal{
+a.boutonModal {
     text-decoration: none;
     padding: 8px 16px;
     border: none;
@@ -92,6 +94,6 @@ button.boutonModal{
     background-color: #28a745;
 }
 
-button.boutonModal, button.boutonModal:hover {
+a.boutonModal:hover {
     opacity: 0.85;
 }

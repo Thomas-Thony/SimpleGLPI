@@ -1,9 +1,6 @@
 <?php
 include_once './Config/connexion.php';
 $connexion = connexion();
-$stmt = $connexion->prepare("SELECT * FROM typemateriel");
-$stmt->execute();
-$inventaire = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -15,15 +12,9 @@ $inventaire = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <title>Document</title>
 </head>
 <body>
-
-<!-- Bouton d'ouverture de modale -->
-<a class="boutonModal" href="#" role="button" data-target="#modal" data-toggle="modal">
-    Modifier
-</a>
-
 <!-- Formulaire avec modale -->
 <form action="" method="post">
-    <div class="modal" id="modal" role="dialog">
+    <div class="modal" id="modal-modifier-<?=$id?>" role="dialog">
         <div class="modal-content">
             
             <div class="modal-close" data-dismiss="dialog">
@@ -31,7 +22,7 @@ $inventaire = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </div>
 
             <div class="modal-header">
-                <p>Modifier le matériel</p>
+                <p>Modifier <?=$item['nomMateriel']?></p>
             </div>
 
             <div class="modal-body">

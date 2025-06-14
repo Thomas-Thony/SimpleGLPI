@@ -3,7 +3,7 @@
 include_once './Config/connexion.php';
 $connexion = connexion();
 
-$stmt = $connexion->prepare("SELECT * FROM inventaire INNER JOIN typemateriel ON inventaire.idTypeMateriel = typemateriel.IdType WHERE inventaire.idTypeMateriel = 1;");
+$stmt = $connexion->prepare("SELECT * FROM inventaire INNER JOIN typemateriel ON inventaire.idTypeMateriel = typemateriel.IdType WHERE inventaire.idTypeMateriel IN (1, 2);");
 $stmt->execute();
 $inventaire = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -16,33 +16,38 @@ $inventaire = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </head>
 
 <body>
-  <table class="tableauInventaireOrdinateurs">
-  <thead>
-    <tr>
-      <th scope="col">Numéro de série</th>
-      <th scope="col">Nom</th>
-      <th scope="col">Type de machine</th>
-      <th scope="col">Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php
-        foreach ($inventaire as $item) {
-            echo "<tr>";
-            echo "<td>" . htmlspecialchars($item['idMateriel']) . "</td>";
-            echo "<td>" . htmlspecialchars($item['nomMateriel']) . "</td>";
-            echo "<td>" . htmlspecialchars($item['TypeMachine']) . "</td>";
-    ?>
-    <td>
-        <?= include_once './modal.php'; ?>
-        <button type="button" class="btn btn-supprimer" data-id="<?= $item['idMateriel'] ?>"data-action="delete">
-            Supprimer
-        </button>
-    </td>
-    <?php
-            echo "</tr>";
-        }
-    ?>
-  </tbody>
-</table>
+<table class="tableauInventaireOrdinateurs">
+    <thead>
+      <tr>
+        <th>Numéro de série</th>
+        <th>Nom</th>
+        <th>Type de machine</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php foreach ($inventaire as $item):
+          $id = $item['idMateriel'];
+          $nom = $item['nomMateriel'];
+          $type = $item['TypeMachine'];
+      ?>
+        <tr>
+          <td><?= htmlspecialchars($id) ?></td>
+          <td><?= htmlspecialchars($nom) ?></td>
+          <td><?= htmlspecialchars($type) ?></td>
+          <td class="action">
+            <!-- Bouton ouvrir modale modifier -->
+            <button class="boutonModal" data-toggle="modal" data-target="#modal-modifier-<?= $id ?>">Modifier</button>
+
+            <!-- Bouton ouvrir modale supprimer -->
+            <button class="boutonModal" data-toggle="modal" data-target="#modal-supprimer-<?= $id ?>">Supprimer</button>
+
+            <!-- Inclusion modales dynamiques -->
+            <?php include './modalModifier.php'; ?>
+            <?php include './modalSupprimer.php'; ?>
+          </td>
+        </tr>
+      <?php endforeach; ?>
+    </tbody>
+  </table>
 </body>
