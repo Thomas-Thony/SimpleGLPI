@@ -1,13 +1,6 @@
 <h1>Vos téléphones</h1>
 <?php
-
-include_once './Config/connexion.php';
-$connexion = connexion();
-
-$stmt = $connexion->prepare("SELECT * FROM inventaire INNER JOIN typemateriel ON inventaire.idTypeMateriel = typemateriel.IdType WHERE inventaire.idTypeMateriel = 4;");
-$stmt->execute();
-$inventaire = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
+include_once './Config/SQL/appelTelephones.php';
 ?>
 
 <head>
@@ -29,18 +22,25 @@ $inventaire = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <tbody>
     <?php
         foreach ($inventaire as $item) {
+          $id = $item['idMateriel'];
+          $nom = $item['nomMateriel'];
+          $type = $item['TypeMachine'];
             echo "<tr>";
             echo "<td>" . htmlspecialchars($item['idMateriel']) . "</td>";
             echo "<td>" . htmlspecialchars($item['nomMateriel']) . "</td>";
             echo "<td>" . htmlspecialchars($item['TypeMachine']) . "</td>";
     ?>
-    <td>
-        <?= include_once './modalModifier.php'; ?>
-        <?= include_once './modalSupprimer.php'; ?>
-        <button type="button" class="btn btn-supprimer" data-id="<?= $item['idMateriel'] ?>"data-action="delete">
-            Supprimer
-        </button>
-    </td>
+   <td class="action">
+            <!-- Bouton ouvrir modale modifier -->
+            <button class="boutonModal" data-toggle="modal" data-target="#modal-modifier-<?= $id ?>">Modifier</button>
+
+            <!-- Bouton ouvrir modale supprimer -->
+            <button class="boutonModal" data-toggle="modal" data-target="#modal-supprimer-<?= $id ?>">Supprimer</button>
+
+            <!-- Inclusion modales dynamiques -->
+            <?php include './modalModifier.php'; ?>
+            <?php include './modalSupprimer.php'; ?>
+          </td>
     <?php
             echo "</tr>";
         }

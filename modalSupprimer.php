@@ -27,7 +27,7 @@ if ($idMateriel) {
 </head>
 <body>
 <!-- Formulaire avec modale -->
-<form action="" method="post">
+<form action="./Config/CRUD-Materiel/deleteMateriel.php" method="post">
 <div class="modal" id="modal-supprimer-<?=$id?>" role="dialog">
     <div class="modal-content">
 
@@ -38,7 +38,7 @@ if ($idMateriel) {
         </div>
 
         <div class="modal-body">
-            <p>Êtes-vous sûr de vouloir supprimer <?=$item['nomMateriel']?>?</p>
+            <p>Êtes-vous sûr de vouloir supprimer <?=$item['nomMateriel']?> ?</p>
         </div>
 
         <div class="modal-footer">

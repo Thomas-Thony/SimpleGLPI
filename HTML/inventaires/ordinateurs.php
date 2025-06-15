@@ -1,11 +1,6 @@
 <?php
 
-include_once './Config/connexion.php';
-$connexion = connexion();
-
-$stmt = $connexion->prepare("SELECT * FROM inventaire INNER JOIN typemateriel ON inventaire.idTypeMateriel = typemateriel.IdType WHERE inventaire.idTypeMateriel IN (1, 2);");
-$stmt->execute();
-$inventaire = $stmt->fetchAll(PDO::FETCH_ASSOC);
+include_once './Config/SQL/appelOrdinateurs.php';
 
 ?>
 
@@ -50,4 +45,10 @@ $inventaire = $stmt->fetchAll(PDO::FETCH_ASSOC);
       <?php endforeach; ?>
     </tbody>
   </table>
+  <center>
+    <button class="boutonModal" data-toggle="modal" data-target="#modal-ajouter">
+      Ajouter un ordinateur
+    </button>
+  </center>
+  <?php include './modalAjouter.php'; ?>
 </body>

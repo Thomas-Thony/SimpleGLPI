@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt->bindParam(':id', $id, PDO::PARAM_INT);
             $stmt->execute();
 
-            header('Location: listeMateriels.php?suppression=success');
+            header('Location: ../../index.php?action=inventaire&success=1');
             exit;
         } catch (Exception $e) {
             die("Erreur lors de la suppression : " . $e->getMessage());

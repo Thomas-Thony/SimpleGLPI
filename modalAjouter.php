@@ -13,8 +13,8 @@ $connexion = connexion();
 </head>
 <body>
 <!-- Formulaire avec modale -->
-<form action="" method="post">
-    <div class="modal" id="modal-modifier-<?=$id?>" role="dialog">
+<form action="./Config/CRUD-Materiel/addMateriel.php" method="post">
+    <div class="modal" id="modal-ajouter" role="dialog">
         <div class="modal-content">
             
             <div class="modal-close" data-dismiss="dialog">
@@ -22,7 +22,7 @@ $connexion = connexion();
             </div>
 
             <div class="modal-header">
-                <p>Modifier <?=$item['nomMateriel']?></p>
+                <p>Ajouter un materiel</p>
             </div>
 
             <div class="modal-body">
@@ -46,8 +46,11 @@ $connexion = connexion();
 
             <div class="modal-footer">
                 <a href="#" class="btn btn-close" role="button" data-dismiss="dialog">Fermer</a>
-                <button class="btn" type="submit">Modifier</button>
+                <form action="ajouterMateriel.php" method="post">
+                    <button class="btn" type="submit">Ajouter</button>
+                </form>
             </div>
+
         </div>
     </div>
 </form>
