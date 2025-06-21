@@ -2,6 +2,7 @@
     //Récupere toutes les informations sur l'inventaire pour chaque type de matériel
     include_once './Config/SQL/appelOrdinateurs.php';
     include_once './Config/SQL/appelTelephones.php';
+    include_once './Config/SQL/appelRouteurs.php';
 
 ?>
 
@@ -50,7 +51,7 @@
         <a class="lienInventaire" href="index.php?action=routeurs">
             <div class="itemRouteurs">
                 <h2 class="titreCategorie">Routeurs</h2><!--A remplacer par une icone-->
-                <p><?php echo "XXX"?> Routeur(s)</p>
+                <p><?php echo $totalRouteurs?> Routeur(s)</p>
             </div>
         </a>
      </div>
