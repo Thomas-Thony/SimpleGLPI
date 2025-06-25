@@ -12,7 +12,7 @@ if(isset($_GET['action'])) {
             break;
         
         case("ordintateurs"):
-            $content = "./HTML/inventaires/ordinateurs.php";
+            $content = "./HTML/inventaires/ordinateurs/ordinateurs.php";
             $title = "GLPI Inside | L'inventaire de vos ordinateurs";
             break;
 
@@ -30,17 +30,6 @@ if(isset($_GET['action'])) {
             $content = "./HTML/inventaires/routeurs.php";
             $title = "GLPI Inside | L'inventaire de vos routeurs";
             break;
-        /**Connexion-Inscription-Déconnexion*/
-        /*case("se_connecter"):
-            $content = "./CRUD/authentification.php";
-            $title = "GLPI Inside | S'authentifier";
-            break;
-
-        case("inscription"):
-                $content = "./CRUD/inscription.php";
-                $title = "GLPI Inside | S'authentifier";
-                break;
-        */
         case("deconnexion"):
             $content = "./CRUD/deconnexion.php";
             $title = "GLPI Inside | S'authentifier";

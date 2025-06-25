@@ -35,9 +35,9 @@ $connexion = connexion();
                     <label for="typeMachine">Type de machine</label>
                     <select name="typeMachine" id="typeMachine" required>
                         <option value="" disabled selected>Choisir le type de la machine</option>
-                        <?php foreach ($inventaire as $unItem): ?>
-                            <option value="<?= htmlspecialchars($unItem['idTypeMateriel']) ?>">
-                                <?= htmlspecialchars($unItem['TypeMachine']) ?>
+                        <?php foreach ($typesOrdinateurs as $type): ?>
+                            <option value="<?= htmlspecialchars($type['idTypeMateriel']) ?>">
+                                <?= htmlspecialchars($type['TypeMachine']) ?>
                             </option>
                         <?php endforeach; ?>
                     </select>
@@ -50,10 +50,8 @@ $connexion = connexion();
                     <button class="btn" type="submit">Ajouter</button>
                 </form>
             </div>
-
         </div>
     </div>
 </form>
-
 </body>
 </html>
