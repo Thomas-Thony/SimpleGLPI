@@ -22,7 +22,7 @@ $connexion = connexion();
             </div>
 
             <div class="modal-header">
-                <p>Ajouter un ordinateur</p>
+                <p>Ajouter un téléphone</p>
             </div>
 
             <div class="modal-body">

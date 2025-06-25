@@ -32,23 +32,25 @@ include_once './Config/SQL/appelRouteurs.php';
           <td><?= htmlspecialchars($type) ?></td>
           <td class="action">
             <!-- Bouton ouvrir modale modifier -->
-            <button class="boutonModal" data-toggle="modal" data-target="#modal-modifier-<?= $id ?>">Modifier</button>
+            <button class="boutonModalModifier" data-toggle="modal" data-target="#modal-modifier-<?= $id ?>">Modifier</button>
 
             <!-- Bouton ouvrir modale supprimer -->
-            <button class="boutonModal" data-toggle="modal" data-target="#modal-supprimer-<?= $id ?>">Supprimer</button>
+            <button class="boutonModalSupprimer" data-toggle="modal" data-target="#modal-supprimer-<?= $id ?>">Supprimer</button>
 
             <!-- Inclusion modales dynamiques -->
-            <?php include './modalModifier.php'; ?>
-            <?php include './modalSupprimer.php'; ?>
+            <?php include './HTML/inventaires/routeurs/modalsRouteurs/modalModifier.php'; ?>
+            <?php include './HTML/inventaires/routeurs/modalsRouteurs/modalSupprimer.php'; ?>
           </td>
         </tr>
       <?php endforeach; ?>
     </tbody>
   </table>
+  <br>
   <center>
-    <button class="boutonModal" data-toggle="modal" data-target="#modal-ajouter">
+    <button class="boutonModalAjouter" data-toggle="modal" data-target="#modal-ajouter">
       Ajouter un routeur
     </button>
   </center>
-  <?php include './modalAjouter.php'; ?>
+  <?php include './HTML/inventaires/routeurs/modalsRouteurs/modalAjouter.php'; ?>
+  <br>
 </body>

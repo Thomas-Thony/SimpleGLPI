@@ -2,6 +2,7 @@
     //Récupere toutes les informations sur l'inventaire pour chaque type de matériel
     include_once './Config/SQL/appelOrdinateurs.php';
     include_once './Config/SQL/appelTelephones.php';
+    include_once './Config/SQL/appelSwitchs.php';
     include_once './Config/SQL/appelRouteurs.php';
 
 ?>
@@ -45,7 +46,7 @@
         <a class="lienInventaire" href="index.php?action=switchs">
             <div class="itemSwitchs">
                 <h2 class="titreCategorie">Switchs</h2><!--A remplacer par une icone-->
-                <p><?php echo "XXX"?> Switch(s)</p>
+                <p><?php echo $totalSwitchs ?> Switch(s)</p>
             </div>
         </a>
         <a class="lienInventaire" href="index.php?action=routeurs">

@@ -13,8 +13,8 @@ $connexion = connexion();
 </head>
 <body>
 <!-- Formulaire avec modale -->
-<form action="./Config/CRUD-Materiel/addMateriel.php" method="post">
-    <div class="modal" id="modal-ajouter" role="dialog">
+<form action="" method="post">
+    <div class="modal" id="modal-modifier-<?=$id?>" role="dialog">
         <div class="modal-content">
             
             <div class="modal-close" data-dismiss="dialog">
@@ -22,7 +22,7 @@ $connexion = connexion();
             </div>
 
             <div class="modal-header">
-                <p>Ajouter un ordinateur</p>
+                <p>Modifier <?=$item['nomMateriel']?></p>
             </div>
 
             <div class="modal-body">
@@ -35,9 +35,9 @@ $connexion = connexion();
                     <label for="typeMachine">Type de machine</label>
                     <select name="typeMachine" id="typeMachine" required>
                         <option value="" disabled selected>Choisir le type de la machine</option>
-                        <?php foreach ($typesOrdinateurs as $type): ?>
-                            <option value="<?= htmlspecialchars($type['idTypeMateriel']) ?>">
-                                <?= htmlspecialchars($type['TypeMachine']) ?>
+                        <?php foreach ($inventaire as $unItem): ?>
+                            <option value="<?= htmlspecialchars($unItem['idTypeMateriel']) ?>">
+                                <?= htmlspecialchars($unItem['TypeMachine']) ?>
                             </option>
                         <?php endforeach; ?>
                     </select>
@@ -46,12 +46,11 @@ $connexion = connexion();
 
             <div class="modal-footer">
                 <a href="#" class="btn btn-close" role="button" data-dismiss="dialog">Fermer</a>
-                <form action="ajouterMateriel.php" method="post">
-                    <button class="btn" type="submit">Ajouter</button>
-                </form>
+                <button class="btn" type="submit">Modifier</button>
             </div>
         </div>
     </div>
 </form>
+
 </body>
 </html>

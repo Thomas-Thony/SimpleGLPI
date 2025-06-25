@@ -32,14 +32,14 @@ include_once './Config/SQL/appelTelephones.php';
     ?>
    <td class="action">
             <!-- Bouton ouvrir modale modifier -->
-            <button class="boutonModal" data-toggle="modal" data-target="#modal-modifier-<?= $id ?>">Modifier</button>
+            <button class="boutonModalModifier" data-toggle="modal" data-target="#modal-modifier-<?= $id ?>">Modifier</button>
 
             <!-- Bouton ouvrir modale supprimer -->
-            <button class="boutonModal" data-toggle="modal" data-target="#modal-supprimer-<?= $id ?>">Supprimer</button>
+            <button class="boutonModalSupprimer" data-toggle="modal" data-target="#modal-supprimer-<?= $id ?>">Supprimer</button>
 
             <!-- Inclusion modales dynamiques -->
-            <?php include './modalModifier.php'; ?>
-            <?php include './modalSupprimer.php'; ?>
+            <?php include './HTML/inventaires/telephones/modalsTelephones/modalModifier.php'; ?>
+            <?php include './HTML/inventaires/telephones/modalsTelephones/modalSupprimer.php'; ?>
           </td>
     <?php
             echo "</tr>";
@@ -47,4 +47,13 @@ include_once './Config/SQL/appelTelephones.php';
     ?>
   </tbody>
 </table>
+</table>
+  <br>
+  <center>
+    <button class="boutonModalAjouter" data-toggle="modal" data-target="#modal-ajouter">
+      Ajouter un téléphone
+    </button>
+  </center>
+  <?php include './HTML/inventaires/telephones/modalsTelephones/modalAjouter.php'; ?>
+  <br>
 </body>

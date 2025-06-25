@@ -17,17 +17,17 @@ if(isset($_GET['action'])) {
             break;
 
         case("telephones"):
-            $content = "./HTML/inventaires/telephones.php";
+            $content = "./HTML/inventaires/telephones/telephones.php";
             $title = "GLPI Inside | L'inventaire de vos télephones";
             break;
 
         case("switchs"):
-            $content = "./HTML/inventaires/switchs.php";
+            $content = "./HTML/inventaires/switchs/switchs.php";
             $title = "GLPI Inside | L'inventaire de vos switchs";
             break;
 
         case("routeurs"):
-            $content = "./HTML/inventaires/routeurs.php";
+            $content = "./HTML/inventaires/routeurs/routeurs.php";
             $title = "GLPI Inside | L'inventaire de vos routeurs";
             break;
         case("deconnexion"):
