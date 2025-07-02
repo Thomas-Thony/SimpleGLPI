@@ -12,3 +12,13 @@ $inventaire = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $stmt = $connexion->prepare("SELECT COUNT(*) AS total FROM inventaire WHERE idTypeMateriel IN (3, 4);");
 $stmt->execute();
 $totalTelephones = $stmt->fetch(PDO::FETCH_ASSOC)['total'];
+
+// Récupère les types de machines uniques (Téléphones fixes et portables)
+$stmt = $connexion->prepare("
+    SELECT DISTINCT typemateriel.IdType AS idTypeMateriel, typemateriel.TypeMachine
+    FROM typemateriel
+    INNER JOIN inventaire ON inventaire.idTypeMateriel = typemateriel.IdType
+    WHERE inventaire.idTypeMateriel IN (3, 4)
+");
+$stmt->execute();
+$typesTelephones = $stmt->fetchAll(PDO::FETCH_ASSOC);

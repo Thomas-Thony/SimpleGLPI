@@ -34,7 +34,7 @@ if ($idMateriel) {
         <div class="modal-close" data-dismiss="dialog">X</div>
 
         <div class="modal-header">
-            <p>Supprimer le téléphoner</p>
+            <p>Supprimer le téléphone</p>
         </div>
 
         <div class="modal-body">

@@ -35,7 +35,7 @@ $connexion = connexion();
                     <label for="typeMachine">Type de machine</label>
                     <select name="typeMachine" id="typeMachine" required>
                         <option value="" disabled selected>Choisir le type de la machine</option>
-                        <?php foreach ($typesOrdinateurs as $type): ?>
+                        <?php foreach ($typesRouteurs as $type): ?>
                             <option value="<?= htmlspecialchars($type['idTypeMateriel']) ?>">
                                 <?= htmlspecialchars($type['TypeMachine']) ?>
                             </option>

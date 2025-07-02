@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1",
+    "electron-winstaller": "^5.4.0"
+  }
+}

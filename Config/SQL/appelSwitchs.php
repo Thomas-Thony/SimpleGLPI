@@ -12,3 +12,13 @@ $inventaire = $stmt->fetchAll(PDO::FETCH_ASSOC);
 $stmt = $connexion->prepare("SELECT COUNT(*) AS total FROM inventaire WHERE idTypeMateriel = 5;");
 $stmt->execute();
 $totalSwitchs = $stmt->fetch(PDO::FETCH_ASSOC)['total'];
+
+// Récupère les types de machines uniques
+$stmt = $connexion->prepare("
+    SELECT DISTINCT typemateriel.IdType AS idTypeMateriel, typemateriel.TypeMachine
+    FROM typemateriel
+    INNER JOIN inventaire ON inventaire.idTypeMateriel = typemateriel.IdType
+    WHERE inventaire.idTypeMateriel = 5
+");
+$stmt->execute();
+$typesSwitchs = $stmt->fetchAll(PDO::FETCH_ASSOC);
