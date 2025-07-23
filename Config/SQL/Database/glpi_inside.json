@@ -1,0 +1,37 @@
+[
+{"type":"header","version":"5.2.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"glpi_inside"},
+{"type":"table","name":"inventaire","database":"glpi_inside","data":
+[
+{"idTypeMateriel":"1","idMateriel":"1","nomMateriel":"Asus Rog Zephyrus G14-403UI-QS1W"},
+{"idTypeMateriel":"4","idMateriel":"2","nomMateriel":"Samsung A25 5G"},
+{"idTypeMateriel":"2","idMateriel":"3","nomMateriel":"Alienware 16 Aurora"},
+{"idTypeMateriel":"2","idMateriel":"14","nomMateriel":"Asus VivoBook S17"},
+{"idTypeMateriel":"2","idMateriel":"17","nomMateriel":"HP Super Tuf"},
+{"idTypeMateriel":"6","idMateriel":"18","nomMateriel":"Switch Gigabit Ethernet S3270-10TM"},
+{"idTypeMateriel":"1","idMateriel":"19","nomMateriel":"LDLC PC Zen Artist 7 v3"},
+{"idTypeMateriel":"5","idMateriel":"20","nomMateriel":"Gigabit Ethernet S3900-48T6S-R"},
+{"idTypeMateriel":"3","idMateriel":"21","nomMateriel":"Logicom ILOA 150"}
+]
+}
+,{"type":"table","name":"roleutilisateur","database":"glpi_inside","data":
+[
+{"idRole":"1","libelleRole":"Gestionnaire"}
+]
+}
+,{"type":"table","name":"typemateriel","database":"glpi_inside","data":
+[
+{"TypeMachine":"Ordinateur","IdType":"1"},
+{"TypeMachine":"Ordinateur Portable","IdType":"2"},
+{"TypeMachine":"Téléphone fixe","IdType":"3"},
+{"TypeMachine":"Téléphone Portable","IdType":"4"},
+{"TypeMachine":"Switch","IdType":"5"},
+{"TypeMachine":"Routeur","IdType":"6"}
+]
+}
+,{"type":"table","name":"utilisateurs","database":"glpi_inside","data":
+[
+{"Prenom":"SuperAdministrateur","Nom":"Sudo","Pseudo":"AdminIT","Mail":"adminit@supportit.com","Mot_De_Passe":"$2y$10$A8bb4a.YG2ITuS3qjgBdRu0qbJE\/FYP2vtqtQBVjBwATvnljU\/Mn6","role":"0","idCompte":"17"}
+]
+}
+]
