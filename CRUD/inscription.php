@@ -13,7 +13,7 @@ $connexion = connexion();
 </head>
 <center>
 <h1>GLPI Inside</h1>
-<form action="../Config/traitementInscription.php" method="POST">
+<form action="./Config/traitementInscription.php" method="POST">
     <h2>S'inscrire</h2>
 <div class="formulaire">
     <div class="saisie">

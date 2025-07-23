@@ -23,7 +23,7 @@
     if(isset($_GET['success']) && $_GET['success'] == 1):
         echo "<div class='message-succes'> ✅ Matériel supprimé avec succès.</div>";
         
-    //Confirmation d'ajout    
+    //Confirmation d'ajout
     elseif(isset($_GET['success']) && $_GET['success'] == 2): 
         echo "<div class='message-succes'> ✅ Matériel ajouté avec succès.</div>";
      endif;

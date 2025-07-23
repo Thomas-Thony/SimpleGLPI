@@ -40,6 +40,11 @@ if(isset($_GET['action'])) {
             $title = "GLPI Inside | Mon compte";
             break;
 
+        case ("reseaux"): 
+            $content = "./HTML/reseaux.php";
+            $title = "GLPI Inside | Gestion des réseaux";
+            break;
+
         default:
             $content = "./HTML/404.php";
             $title = "Page non trouvée | GLPI Inside";

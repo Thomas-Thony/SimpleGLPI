@@ -11,7 +11,7 @@
         <div class="boxOption">
             <h3 class="titreOption">S'inscrire : </h3>
             <div class="lienOption">
-                <a href="./login.php">Inscription</a>
+                <a href="./registration.php">Inscription</a>
             </div>
         </div>
         <div class="boxOption">

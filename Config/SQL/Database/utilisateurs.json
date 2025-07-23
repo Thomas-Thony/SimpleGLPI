@@ -1,0 +1,9 @@
+[
+{"type":"header","version":"5.2.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"glpi_inside"},
+{"type":"table","name":"utilisateurs","database":"glpi_inside","data":
+[
+{"Prenom":"SuperAdministrateur","Nom":"Sudo","Pseudo":"AdminIT","Mail":"adminit@supportit.com","Mot_De_Passe":"$2y$10$A8bb4a.YG2ITuS3qjgBdRu0qbJE\/FYP2vtqtQBVjBwATvnljU\/Mn6","role":"0","idCompte":"17"}
+]
+}
+]

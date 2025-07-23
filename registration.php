@@ -17,6 +17,6 @@ if (isset($_SESSION["Gestionnaire"])) {
     <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
-    <?php include './CRUD/authentification.php'; ?>
+    <?php include './CRUD/inscription.php'; ?>
 </body>
 </html>
