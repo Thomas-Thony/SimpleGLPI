@@ -3,7 +3,7 @@ footer {
     display: flex;
     flex-direction: column;
     background-color: #063970;
-    width: 100%;
+    float: right;
 }
 
 .footer-copyright {
