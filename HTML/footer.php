@@ -3,7 +3,6 @@
     <meta charset="UTF-8">
 </head>
 
-<footer class="gen">
 <footer class="footer">
     <div class="content">
         <div class="row">
@@ -22,18 +21,10 @@
             </div>
         </div>
     </div>
-</footer>
-</div>
-<footer class="footer-1">
-    <div class="content-1">
-        <div class="row-1">
-            <div class="footer-copyright">
-                <h4>Copyright</h4>
-                <ul>
-                    <li><small>Copyright © 2025 -  GLPI Inside | Le gestionnaire de parc informatique open source </small></li>
-                </ul>
-            </div>
-        </div>
+    <div class="footer-copyright">
+        <h4>Copyright</h4>
+        <ul>
+            <li><small>Copyright © 2025 - GLPI Inside | Le gestionnaire de parc informatique open source</small></li>
+        </ul>
     </div>
-</footer>
 </footer>

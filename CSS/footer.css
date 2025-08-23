@@ -1,14 +1,23 @@
-footer {
-    font-family: "Roboto", sans-serif;
+body {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1; /* pousse le footer vers le bas */
+}
+
+.footer {
+    margin-left: 250px; 
+    padding: 20px;
     background-color: #063970;
-    float: right;
+    color: white;
 }
 
 .footer-copyright {
-    background: #34493e;
     bottom: 20px;
+    padding: 10px;
 }
 
 .row {

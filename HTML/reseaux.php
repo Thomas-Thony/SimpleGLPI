@@ -34,8 +34,10 @@ include_once './Config/SQL/appelReseaux.php';
                     </tbody>
                 </table>
             </div>
+            
     <?php
         }
     endif;
     ?>
+    <br>
 </body>

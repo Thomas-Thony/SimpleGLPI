@@ -4,6 +4,16 @@
     font-family: "Roboto", sans-serif;
 }
 
+/*Svp comprenez moi, je voulais être sur que ça soit centré*/
+section{
+    align-items: center;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+}
+
 h1{
     text-align: center;
 }

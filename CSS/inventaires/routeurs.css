@@ -8,13 +8,18 @@ body {
     justify-items: center;
 }
 
-table {
+table, table.tableauInventaireRouteurs {
     border-collapse: collapse;
     border: 2px solid rgb(140 140 140);
     font-family: sans-serif;
     font-size: 0.8rem;
     letter-spacing: 1px;
     padding: 20px;
+        justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
 }
 
 thead tr th {
@@ -23,7 +28,6 @@ thead tr th {
 
 table.tableauInventaireRouteurs{
     background-color: aquamarine;
-    padding: 20px;
 }
 
 caption {

@@ -32,31 +32,39 @@ a.lienInventaire:hover div.itemRouteurs {
 }
 
 .itemOrdinateurs{
+    border-radius: 10px;
     background-color: brown;
     border: 1px solid brown;
     box-shadow: 5px red;
-    width: fit-content;
+    width: 150px;
+    padding: 1px;
 }
 
 .itemTelephones {
+    border-radius: 10px;
     background-color: greenyellow;
     border: 1px solid greenyellow;
     box-shadow: inset;
-    width: fit-content;
+    width: 150px;
+    padding: 1px;
 }
 
 .itemSwitchs {
+    border-radius: 10px;
     background-color: aqua;
+    padding: 1px;
     border: 1px solid aqua;
     box-shadow: inset;
-    width: fit-content;
+    width: 150px;
 }
 
 .itemRouteurs{
+    border-radius: 10px;
     background-color: orange;
     border: 1px solid orange;
     box-shadow: inset;
-    width: fit-content;
+    width: 150px;
+    padding: 1px;
 }
 
 /*Message de succès de suppression d'un matériel*/

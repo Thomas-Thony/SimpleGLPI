@@ -1,3 +1,4 @@
+<h1>Vos ordinateurs</h1>
 <?php
 
 include_once './Config/SQL/appelOrdinateurs.php';
