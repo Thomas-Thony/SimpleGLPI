@@ -13,7 +13,7 @@ $connexion = connexion();
 </head>
 <body>
 <!-- Formulaire avec modale -->
-<form action="" method="post">
+<form action="./Config/CRUD-Materiel/updateMateriel.php" method="post">
     <div class="modal" id="modal-modifier-<?=$id?>" role="dialog">
         <div class="modal-content">
             
@@ -28,13 +28,13 @@ $connexion = connexion();
             <div class="modal-body">
                 <div class="champModifs">
                     <label for="nomMachine">Nom :</label>
-                    <input type="text" name="nomMachine" id="nomMachine" placeholder="Nom de la machine" required>
+                    <input type="text" name="nomMachine" id="nomMachine" placeholder=<?= htmlspecialchars($item['nomMateriel'])?> required>
                 </div>
 
                 <div class="champModifs">
                     <label for="typeMachine">Type de machine</label>
                     <select name="typeMachine" id="typeMachine" required>
-                        <option value="" disabled selected>Choisir le type de la machine</option>
+                        <option value=<?=$item['idTypeMateriel']?> selected><?=$item['TypeMachine']?></option>
                         <?php foreach ($inventaire as $unItem): ?>
                             <option value="<?= htmlspecialchars($unItem['idTypeMateriel']) ?>">
                                 <?= htmlspecialchars($unItem['TypeMachine']) ?>
@@ -42,7 +42,18 @@ $connexion = connexion();
                         <?php endforeach; ?>
                     </select>
                 </div>
-            </div>
+
+                <div class="champModifs">
+                    <label for="reseauMachine">Réseau associé :</label>
+                    <select name="reseauMachine" id="reseauMachine" required>
+                        <option value="null">Aucun</option>
+                        <?php foreach ($reseaux as $reseau): ?>
+                            <option value="<?= $reseau['idReseau'] ?>">
+                                <?= htmlspecialchars($reseau['nomReseau']) ?>
+                            </option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
 
             <div class="modal-footer">
                 <a href="#" class="btn btn-close" role="button" data-dismiss="dialog">Fermer</a>

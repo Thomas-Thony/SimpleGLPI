@@ -1,6 +1,7 @@
 <h1>Vos téléphones</h1>
 <?php
-include_once './Config/SQL/appelTelephones.php';
+  include_once './Config/SQL/appelTelephones.php';
+  include_once './Config/SQL/appelReseaux.php';
 ?>
 
 <head>
@@ -16,6 +17,7 @@ include_once './Config/SQL/appelTelephones.php';
       <th scope="col">Numéro de série</th>
       <th scope="col">Nom</th>
       <th scope="col">Type de machine</th>
+      <th scope="col">Réseau</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -25,10 +27,23 @@ include_once './Config/SQL/appelTelephones.php';
           $id = $item['idMateriel'];
           $nom = $item['nomMateriel'];
           $type = $item['TypeMachine'];
+          $idReseau= $item['idReseau'];
+          //Joindre la table inventaire et reseaux pour afficher le nom du réseau
+          $stmt = $connexion->prepare("SELECT nomReseau FROM reseaux WHERE idReseau = :idReseau");
+          $stmt->bindParam(':idReseau', $idReseau, PDO::PARAM_INT);
+          $stmt->execute();
+          $reseau = $stmt->fetch(PDO::FETCH_ASSOC);
+          if($reseau) {
+            $idReseau = $reseau['nomReseau'];
+          }else{
+            $idReseau = "Aucun réseau assigné";
+          }
             echo "<tr>";
             echo "<td>" . htmlspecialchars($item['idMateriel']) . "</td>";
             echo "<td>" . htmlspecialchars($item['nomMateriel']) . "</td>";
             echo "<td>" . htmlspecialchars($item['TypeMachine']) . "</td>";
+            echo "<td>" . $idReseau . "</td>";
+      
     ?>
    <td class="action">
             <!-- Bouton ouvrir modale modifier -->

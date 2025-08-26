@@ -1,6 +1,6 @@
 <?php
-include_once './Config/connexion.php';
-$connexion = connexion();
+    include_once './Config/connexion.php';
+    $connexion = connexion();
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -32,7 +32,7 @@ $connexion = connexion();
                 </div>
 
                 <div class="champModifs">
-                    <label for="typeMachine">Type de machine</label>
+                    <label for="typeMachine">Type de machine :</label>
                     <select name="typeMachine" id="typeMachine" required>
                         <option value="" disabled selected>Choisir le type de la machine</option>
                         <?php foreach ($typesOrdinateurs as $type): ?>
@@ -42,6 +42,19 @@ $connexion = connexion();
                         <?php endforeach; ?>
                     </select>
                 </div>
+
+                <div class="champModifs">
+                    <label for="reseauMachine">Réseau associé :</label>
+                    <select name="reseauMachine" id="reseauMachine" required>
+                        <option value="null">Aucun</option>
+                        <?php foreach ($reseaux as $reseau): ?>
+                            <option value="<?= $reseau['idReseau'] ?>">
+                                <?= htmlspecialchars($reseau['nomReseau']) ?>
+                            </option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+
             </div>
 
             <div class="modal-footer">
