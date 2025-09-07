@@ -55,6 +55,16 @@ $connexion = connexion();
                     </select>
                 </div>
 
+                <div class="champModifs">
+                    <label for="ipv4">Adresse (IPV4)</label>
+                    <input type="text" name="adresseIPV4" id="adresseIPV4" placeholder="xxx.xxx.xxx.xxx" required>
+                </div>
+
+                <div class="champModifs">
+                    <label for="ipv4">Sous-masque</label>
+                    <input type="text" name="sousMasque" id="sousMasque" placeholder="xxx.xxx.xxx.xxx" required>
+                </div>
+
             <div class="modal-footer">
                 <a href="#" class="btn btn-close" role="button" data-dismiss="dialog">Fermer</a>
                 <button class="btn" type="submit">Modifier</button>

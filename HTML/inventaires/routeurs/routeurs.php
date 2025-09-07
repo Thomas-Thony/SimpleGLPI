@@ -19,6 +19,8 @@ include_once './Config/SQL/appelRouteurs.php';
         <th>Nom</th>
         <th>Type de machine</th>
         <th>Réseau</th>
+        <th>Adresse</th>
+        <th>Sous-masque</th>
         <th>Action</th>
       </tr>
     </thead>
@@ -28,6 +30,8 @@ include_once './Config/SQL/appelRouteurs.php';
         $nom = $item['nomMateriel'];
         $type = $item['TypeMachine'];
         $idReseau = $item['idReseau'];
+        $ipv4 = $item['adresseIPV4'];
+        $sousMasque = $item['sousMasque'];
         //Joindre la table inventaire et reseaux pour afficher le nom du réseau
         $stmt = $connexion->prepare("SELECT nomReseau FROM reseaux WHERE idReseau = :idReseau");
         $stmt->bindParam(':idReseau', $idReseau, PDO::PARAM_INT);
@@ -43,6 +47,8 @@ include_once './Config/SQL/appelRouteurs.php';
         echo "<td>" . htmlspecialchars($item['nomMateriel']) . "</td>";
         echo "<td>" . htmlspecialchars($item['TypeMachine']) . "</td>";
         echo "<td>" . $idReseau . "</td>";
+        echo "<td>" . inet_ntop($item['adresseIPV4']) . "</td>";//Affichage sous forme d'ip
+        echo "<td>" . inet_ntop($item['sousMasque']) . "</td>";
       ?>
        <td class="action">
          <!-- Bouton ouvrir modale modifier -->

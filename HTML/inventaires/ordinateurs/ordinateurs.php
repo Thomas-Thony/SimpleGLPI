@@ -1,14 +1,14 @@
 <h1>Vos ordinateurs</h1>
 <?php
-
 include_once './Config/SQL/appelOrdinateurs.php';
-
 ?>
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./CSS/inventaires/ordinateurs.css">
+  <link rel="stylesheet" href="./CSS/modal.css">
+  <script src="./SCRIPTS/modal.js" defer></script>
 </head>
 
 <body>
@@ -23,47 +23,49 @@ include_once './Config/SQL/appelOrdinateurs.php';
       </tr>
     </thead>
     <tbody>
-      <?php
-        foreach ($inventaire as $item) {
-          $id = $item['idMateriel'];
-          $nom = $item['nomMateriel'];
-          $type = $item['TypeMachine'];
-          $idReseau = $item['idReseau'];
-          //Joindre la table inventaire et reseaux pour afficher le nom du réseau
-          $stmt = $connexion->prepare("SELECT nomReseau FROM reseaux WHERE idReseau =          :idReseau");
-          $stmt->bindParam(':idReseau', $idReseau, PDO::PARAM_INT);
-          $stmt->execute();
-          $reseau = $stmt->fetch(PDO::FETCH_ASSOC);
-          if ($reseau) {
-            $idReseau = $reseau['nomReseau'];
-          } else {
-            $idReseau = "Aucun réseau assigné";
-          }
-          echo "<tr>";
-          echo "<td>" . htmlspecialchars($item['idMateriel']) . "</td>";
-          echo "<td>" . htmlspecialchars($item['nomMateriel']) . "</td>";
-          echo "<td>" . htmlspecialchars($item['TypeMachine']) . "</td>";
-          echo "<td>" . $idReseau . "</td>";
+      <?php foreach ($inventaire as $item):
+        $id = $item['idMateriel'];
+        $nom = $item['nomMateriel'];
+        $type = $item['TypeMachine'];
+        $idReseau = $item['idReseau'];
+
+        // Récupération du nom du réseau
+        $stmt = $connexion->prepare("SELECT nomReseau FROM reseaux WHERE idReseau = :idReseau");
+        $stmt->bindParam(':idReseau', $idReseau, PDO::PARAM_INT);
+        $stmt->execute();
+        $reseau = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($reseau) {
+          $idReseau = $reseau['nomReseau'];
+        } else {
+          $idReseau = "Aucun réseau assigné";
+        }
         ?>
+        <tr>
+          <td><?= htmlspecialchars($id) ?></td>
+          <td><?= htmlspecialchars($nom) ?></td>
+          <td><?= htmlspecialchars($type) ?></td>
+          <td><?= htmlspecialchars($idReseau) ?></td>
           <td class="action">
             <!-- Bouton ouvrir modale modifier -->
-            <button class="boutonModalModifier" data-toggle="modal"
-              data-target="#modal-modifier-<?= $id ?>">Modifier</button>
+            <button class="boutonModalModifier" data-toggle="modal" data-target="#modal-modifier-<?= $id ?>">
+              Modifier
+            </button>
 
             <!-- Bouton ouvrir modale supprimer -->
-            <button class="boutonModalSupprimer" data-toggle="modal"
-              data-target="#modal-supprimer-<?= $id ?>">Supprimer</button>
+            <button class="boutonModalSupprimer" data-toggle="modal" data-target="#modal-supprimer-<?= $id ?>">
+              Supprimer
+            </button>
 
             <!-- Inclusion modales dynamiques -->
             <?php include './HTML/inventaires/ordinateurs/modalsOrdinateurs/modalModifier.php'; ?>
             <?php include './HTML/inventaires/ordinateurs/modalsOrdinateurs/modalSupprimer.php'; ?>
           </td>
         </tr>
-      <?php 
-        }
-      ?>
+      <?php endforeach; ?>
     </tbody>
   </table>
+
   <br>
   <center>
     <button class="boutonModalAjouter" data-toggle="modal" data-target="#modal-ajouter">

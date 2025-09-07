@@ -16,14 +16,6 @@ if ($idMateriel) {
     }
 }
 ?>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/modal.css">
-    <script src="./SCRIPTS/modal.js" defer></script>
-    <title>Document</title>
-</head>
 <body>
 <!-- Formulaire avec modale -->
 <form action="./Config/CRUD-Materiel/deleteMateriel.php" method="post">
