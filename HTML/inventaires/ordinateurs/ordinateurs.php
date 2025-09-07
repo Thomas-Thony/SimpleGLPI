@@ -19,6 +19,8 @@ include_once './Config/SQL/appelOrdinateurs.php';
         <th>Nom</th>
         <th>Type de machine</th>
         <th>Réseau</th>
+        <th>Adresse</th>
+        <th>Sous-masque</th>
         <th>Action</th>
       </tr>
     </thead>
@@ -28,6 +30,8 @@ include_once './Config/SQL/appelOrdinateurs.php';
         $nom = $item['nomMateriel'];
         $type = $item['TypeMachine'];
         $idReseau = $item['idReseau'];
+        $ipv4 = $item['adresseIPV4'];
+        $sousMasque = $item['sousMasque'];
 
         // Récupération du nom du réseau
         $stmt = $connexion->prepare("SELECT nomReseau FROM reseaux WHERE idReseau = :idReseau");
@@ -46,6 +50,10 @@ include_once './Config/SQL/appelOrdinateurs.php';
           <td><?= htmlspecialchars($nom) ?></td>
           <td><?= htmlspecialchars($type) ?></td>
           <td><?= htmlspecialchars($idReseau) ?></td>
+          <?php
+            echo "<td>" . inet_ntop($item['adresseIPV4']) . "</td>";//Affichage sous forme d'ip
+            echo "<td>" . inet_ntop($item['sousMasque']) . "</td>";//Affichage sous forme d'ip
+          ?>
           <td class="action">
             <!-- Bouton ouvrir modale modifier -->
             <button class="boutonModalModifier" data-toggle="modal" data-target="#modal-modifier-<?= $id ?>">

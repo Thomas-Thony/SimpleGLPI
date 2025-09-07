@@ -27,7 +27,7 @@
                 $stmt->bindParam(':sousMasque', $sousMasque_bin);
                 $stmt->execute();
 
-                header('Location: ../../index.php?action=inventaire&success=2');
+                header('Location: ../../index.php?action=inventaire&success=3');
                 exit;
             } catch (Exception $e) {
                 die("Erreur lors de la modification : " . $e->getMessage());

@@ -48,7 +48,7 @@ include_once './Config/SQL/appelRouteurs.php';
         echo "<td>" . htmlspecialchars($item['TypeMachine']) . "</td>";
         echo "<td>" . $idReseau . "</td>";
         echo "<td>" . inet_ntop($item['adresseIPV4']) . "</td>";//Affichage sous forme d'ip
-        echo "<td>" . inet_ntop($item['sousMasque']) . "</td>";
+        echo "<td>" . inet_ntop($item['sousMasque']) . "</td>";//Affichage sous forme d'ip
       ?>
        <td class="action">
          <!-- Bouton ouvrir modale modifier -->

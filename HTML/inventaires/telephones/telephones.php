@@ -18,6 +18,8 @@
       <th scope="col">Nom</th>
       <th scope="col">Type de machine</th>
       <th scope="col">Réseau</th>
+      <th scope="col">Adresse</th>
+      <th scope="col">Sous-masque</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -28,6 +30,8 @@
           $nom = $item['nomMateriel'];
           $type = $item['TypeMachine'];
           $idReseau= $item['idReseau'];
+          $ipv4 = $item['adresseIPV4'];
+          $sousMasque = $item['sousMasque'];
           //Joindre la table inventaire et reseaux pour afficher le nom du réseau
           $stmt = $connexion->prepare("SELECT nomReseau FROM reseaux WHERE idReseau = :idReseau");
           $stmt->bindParam(':idReseau', $idReseau, PDO::PARAM_INT);
@@ -43,7 +47,8 @@
             echo "<td>" . htmlspecialchars($item['nomMateriel']) . "</td>";
             echo "<td>" . htmlspecialchars($item['TypeMachine']) . "</td>";
             echo "<td>" . $idReseau . "</td>";
-      
+            echo "<td>" . inet_ntop($item['adresseIPV4']) . "</td>";//Affichage sous forme d'ip
+            echo "<td>" . inet_ntop($item['sousMasque']) . "</td>";//Affichage sous forme d'ip
     ?>
    <td class="action">
             <!-- Bouton ouvrir modale modifier -->
