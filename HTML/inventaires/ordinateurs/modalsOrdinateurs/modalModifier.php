@@ -1,6 +1,7 @@
 <?php
-include_once './Config/connexion.php';
-$connexion = connexion();
+    include_once './Config/connexion.php';
+    $connexion = connexion();
+    include_once './Config/SQL/appelReseaux.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -9,7 +10,6 @@ $connexion = connexion();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/modal.css">
     <script src="./SCRIPTS/modal.js" defer></script>
-    <title>Document</title>
 </head>
 <body>
 <!-- Formulaire avec modale -->
@@ -29,13 +29,13 @@ $connexion = connexion();
                 <div class="champModifs">
                     <input type="hidden" name="idMateriel" value="<?= $id ?>">
                     <label for="nomMachine">Nom :</label>
-                    <input type="text" name="nomMachine" id="nomMachine" placeholder=<?= htmlspecialchars($item['nomMateriel'])?> required>
+                    <input type="text" name="nomMachine" id="nomMachine" placeholder=<?= htmlspecialchars($item['nomMateriel'])?> value="<?php echo $item['nomMateriel'] ?>" required>
                 </div>
 
                 <div class="champModifs">
                     <label for="typeMachine">Type de machine</label>
                     <select name="typeMachine" id="typeMachine" required>
-                        <option value=<?=$item['idTypeMateriel']?> selected><?=$item['TypeMachine']?></option>
+                        <option value="<?php echo $item['idTypeMateriel'] ?>" selected><?php echo $item['TypeMachine'] ?></option>
                         <?php foreach ($inventaire as $unItem): ?>
                             <option value="<?= htmlspecialchars($unItem['idTypeMateriel']) ?>">
                                 <?= htmlspecialchars($unItem['TypeMachine']) ?>
@@ -58,12 +58,13 @@ $connexion = connexion();
 
                 <div class="champModifs">
                     <label for="ipv4">Adresse (IPV4)</label>
-                    <input type="text" name="adresseIPV4" id="adresseIPV4" placeholder="xxx.xxx.xxx.xxx" required>
+                    <input type="text" name="adresseIPV4" id="adresseIPV4" placeholder="xxx.xxx.xxx.xxx" value="<?php echo inet_ntop($item['adresseIPV4']) ?>" required>
                 </div>
-
+                
                 <div class="champModifs">
                     <label for="ipv4">Sous-masque</label>
-                    <input type="text" name="sousMasque" id="sousMasque" placeholder="xxx.xxx.xxx.xxx" required>
+                    <input type="text" name="sousMasque" id="sousMasque" placeholder="xxx.xxx.xxx.xxx"
+                        value="<?php echo inet_ntop($item['sousMasque']) ?>" required>
                 </div>
 
             <div class="modal-footer">

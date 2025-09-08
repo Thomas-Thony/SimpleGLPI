@@ -1,5 +1,5 @@
 <?php
-include_once './Config/SQL/appelReseaux.php';
+    include_once './Config/SQL/appelReseaux.php';
 ?>
 
 <head>
@@ -14,27 +14,26 @@ include_once './Config/SQL/appelReseaux.php';
     <?php else: ?>
         <h1>Vos réseaux</h1>
         <?php
-            foreach ($reseaux as $reseau) {
+            foreach ($nombreMaterielParReseau as $reseau) {
         ?>
-            <div class="table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Identifiant du réseau</th>
-                            <th>Nom</th>
-                            <th>Nombre d'appareils</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th><?php echo $reseau['idReseau'] ?></th>
-                            <th><?php echo $reseau['nomReseau'] ?></th>
-                            <th><?php echo 0 ?> appareil(s)</th>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
+        <div class="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Identifiant du réseau</th>
+                        <th>Nom</th>
+                        <th>Nombre d'appareils</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th><?php echo $reseau['idReseau'] ?></th>
+                        <th><?php echo $reseau['nomReseau'] ?></th>
+                        <th><a href="#"><?php echo $reseau['totalMateriel']?> appareil(s)</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>   
     <?php
         }
     endif;
