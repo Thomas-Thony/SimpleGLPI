@@ -13,7 +13,7 @@ $connexion = connexion();
 </head>
 <body>
 <!-- Formulaire avec modale -->
-<form action="" method="post">
+<form action="./Config/CRUD-Materiel/updateMateriel.php" method="post">
     <div class="modal" id="modal-modifier-<?=$id?>" role="dialog">
         <div class="modal-content">
             
@@ -27,6 +27,7 @@ $connexion = connexion();
 
             <div class="modal-body">
                 <div class="champModifs">
+                    <input type="hidden" name="idMateriel" value="<?= $id ?>">
                     <label for="nomMachine">Nom :</label>
                     <input type="text" name="nomMachine" id="nomMachine" placeholder="Nom de la machine" required>
                 </div>

@@ -27,6 +27,7 @@ $connexion = connexion();
 
             <div class="modal-body">
                 <div class="champModifs">
+                    <input type="hidden" name="idMateriel" value="<?= $id ?>">
                     <label for="nomMachine">Nom :</label>
                     <input type="text" name="nomMachine" id="nomMachine" placeholder=<?= htmlspecialchars($item['nomMateriel'])?> required>
                 </div>
