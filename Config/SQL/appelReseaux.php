@@ -20,3 +20,21 @@ LEFT JOIN inventaire ON inventaire.idReseau = reseaux .idReseau
 GROUP BY reseaux.idReseau, reseaux.nomReseau;");
 $stmt->execute();
 $nombreMaterielParReseau = $stmt->fetchAll(PDO::FETCH_ASSOC);   
+
+//Selectione le réseau en fonction de son ID
+$stmt = $connexion->prepare("SELECT 
+    inventaire.idMateriel,
+    inventaire.nomMateriel,
+    inventaire.adresseIPV4,
+    inventaire.sousMasque,
+    reseaux.idReseau AS reseau_id,
+    reseaux.nomReseau,
+    typemateriel.TypeMachine,
+    typemateriel.IdType
+    FROM inventaire
+    JOIN reseaux ON reseaux.idReseau = inventaire.idReseau
+    JOIN typemateriel ON inventaire.idTypeMateriel = typemateriel.IdType;
+    WHERE reseaux.idReseau = :idReseau;");
+$stmt->bindParam(':idReseau', $idReseau);
+$stmt->execute();
+$reseauSelectionne = $stmt->fetchAll(PDO::FETCH_ASSOC);

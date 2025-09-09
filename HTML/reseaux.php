@@ -27,9 +27,16 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <th><?php echo $reseau['idReseau'] ?></th>
-                        <th><?php echo $reseau['nomReseau'] ?></th>
-                        <th><a href="#"><?php echo $reseau['totalMateriel']?> appareil(s)</th>
+                        <form action="index.php?action=tableauReseau" method="post">
+                            <input type="text" name="idReseau" value="<?php echo $reseau['idReseau'] ?>" hidden>
+                            <th><?php echo $reseau['idReseau'] ?></th>
+                            <th><?php echo $reseau['nomReseau'] ?></th>
+                            <th>
+                                <button type="submit">
+                                    <?php echo $reseau['totalMateriel']?>appareil(s)
+                                </button> 
+                            </th>
+                        </form>
                     </tr>
                 </tbody>
             </table>
