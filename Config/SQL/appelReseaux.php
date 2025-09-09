@@ -33,7 +33,7 @@ $stmt = $connexion->prepare("SELECT
     typemateriel.IdType
     FROM inventaire
     JOIN reseaux ON reseaux.idReseau = inventaire.idReseau
-    JOIN typemateriel ON inventaire.idTypeMateriel = typemateriel.IdType;
+    JOIN typemateriel ON inventaire.idTypeMateriel = typemateriel.IdType
     WHERE reseaux.idReseau = :idReseau;");
 $stmt->bindParam(':idReseau', $idReseau);
 $stmt->execute();
