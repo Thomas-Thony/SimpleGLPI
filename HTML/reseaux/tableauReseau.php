@@ -6,8 +6,11 @@
     include_once './Config/SQL/appelTelephones.php';
     include_once './Config/SQL/appelOrdinateurs.php';
 ?>
+<head>
+    <link rel="stylesheet" href="./CSS/inventaires/reseaux.css">
+</head>
 <body>
-    <table class="tableauInventaire">
+    <table class="tableauInventaireReseau">
         <thead>
           <tr>
             <th>Numéro de série</th>
