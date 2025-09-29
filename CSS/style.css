@@ -28,4 +28,33 @@ h1{
     letter-spacing: 1px;
     letter-spacing: 1px;
     padding: 20px;
+    margin-bottom: 20px;
+}
+
+.boutonsContainer{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.boutonLien{
+    background-color: bisque;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.boutonLien:hover{
+    background-color: rgb(255, 200, 150);
+    color: black;
+    text-decoration: none;
+    list-style: none;
+}
+
+.boutonLien a{
+    text-decoration: none;
+    color: black;
 }

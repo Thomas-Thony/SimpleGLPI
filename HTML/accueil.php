@@ -11,9 +11,29 @@
         <p class="texteAccueil">
             Bienvenue sur votre tableau de bord. Ici, vous pouvez gérer et visualiser l'état de votre réseau et de vos équipements. Utilisez les menus pour naviguer entre les différentes sections et accéder aux fonctionnalités disponibles.
         </p>
-        <a>
-            <button class="boutonInventaire"><a class="lienInventaire" href="index.php?action=inventaire">Inventaire</a></button>
-        </a>
+        <div class="boutonsContainer">
+            <button class="boutonLien">
+                <a class="lienInventaire" href="index.php?action=inventaire">
+                    Inventaire
+                </a>
+            </button>
+
+            <button class="boutonLien">
+                <a class="lienReseaux" href="index.php?action=reseaux">
+                    Réseaux
+                </a>
+            </button>
+            <button class="boutonLien">
+                <a href="index.php?action=utilisateurs">
+                    Utilisateurs
+                </a>
+            </button>
+            <button class="boutonLien">
+                <a href="index.php?action=user">
+                    Mon compte
+                </a>
+            </button>
+        </div> 
     </div>
 </body>
 </html>
