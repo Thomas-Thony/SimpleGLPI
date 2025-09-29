@@ -16,13 +16,13 @@
         <?php
             foreach ($nombreMaterielParReseau as $reseau) {
         ?>
-        <div class="table">
-            <table>
+        <div>
+            <table class="tableauInventaireReseaux ">
                 <thead>
                     <tr>
-                        <th>Identifiant du réseau</th>
-                        <th>Nom</th>
-                        <th>Nombre d'appareils</th>
+                        <th scope="col">Identifiant du réseau</th>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Nombre d'appareils</th>
                     </tr>
                 </thead>
                 <tbody>
